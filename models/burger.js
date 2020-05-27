@@ -1,8 +1,8 @@
 orm = require('../config/orm')
 
 const burger = {
-  getAll(){
-    orm.selectAll('burgers',results=>results)
+  getAll(cb){
+    orm.selectAll('burgers',results=>cb(results))
   },
 
   create(burgerName){

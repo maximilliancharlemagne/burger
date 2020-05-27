@@ -7,7 +7,9 @@ router.use(express.urlencoded(extended=true))
 router.use(express.json())
 
 router.get('/burger', (req, res) => {
-  res.json(burger.getAll())
+  burger.getAll((results) => {
+    res.json(results)
+  })
 })
 
 router.post('/burger',(req, res) => {
