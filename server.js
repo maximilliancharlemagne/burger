@@ -4,6 +4,9 @@ const router = require('./controllers/burgers_controller')
 
 const app = express();
 
+app.use(router,'/api')
+app.use(express.static(path.join(__dirname, '/public')))
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
