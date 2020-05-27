@@ -13,13 +13,12 @@ router.get('/burger', (req, res) => {
 })
 
 router.post('/burger',(req, res) => {
-  console.log(req.body)
   burger.create(req.body.name)
   res.sendStatus(200)
 })
 
 router.put('/burger', (req, res) => {
-  burger.devour(req.params.name)
+  burger.devour(req.body.name)
   res.sendStatus(200)
 })
 
