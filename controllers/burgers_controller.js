@@ -1,6 +1,5 @@
 const express = require('express')
 const burger = require('../models/burger')
-const path = require('path')
 
 const router = express.Router()
 

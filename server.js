@@ -1,10 +1,10 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const router = require('./controllers/burgers_controller')
-
+const path = require('path')
 const app = express();
 
-app.use(router,'/api')
+app.use('/api',router)
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.engine('handlebars', exphbs());
