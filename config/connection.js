@@ -1,8 +1,8 @@
-const { createConnection } = require("mysql") 
+const { createConnection } = require("mysql2") 
 
 const connection = createConnection({
   port: 3306,
-  username: 'root',
+  user: 'root',
   password: process.env.DB_PASS,
   database: 'burgers_db',
   host: 'localhost'
