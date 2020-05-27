@@ -4,13 +4,15 @@ const burger = require('../models/burger')
 const router = express.Router()
 
 router.use(express.urlencoded(extended=true))
+router.use(express.json())
 
 router.get('/burger', (req, res) => {
   res.json(burger.getAll())
 })
 
 router.post('/burger',(req, res) => {
-  burger.create(req.params.name)
+  console.log(req.body)
+  burger.create(req.body.name)
   res.sendStatus(200)
 })
 

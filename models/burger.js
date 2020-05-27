@@ -6,11 +6,11 @@ const burger = {
   },
 
   create(burgerName){
-    orm.insertOne('burgers',{name: burgerName,devoured:false},(info)=>console.log(info))
+    orm.insertOne('burgers',{burger_name: burgerName,devoured:false},(info)=>console.log(info))
   },
 
   devour(burgerName){
-    orm.updateOne('burgers',{devoured: true},{name: burgerName},(info)=>console.log(info))
+    orm.updateOne('burgers',{devoured: true},{burger_name: burgerName},(info)=>console.log(info))
   }
 }
 
