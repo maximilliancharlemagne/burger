@@ -1,11 +1,5 @@
 const { createConnection } = require("mysql2") 
 
-const connection = createConnection({
-  port: 3306,
-  user: 'root',
-  password: process.env.DB_PASS,
-  database: 'burgers_db',
-  host: 'localhost'
-})
+const connection = createConnection(process.env.JAWSDB_URL || `mysql://root:${process.env.DB_PASS}@localhost:3306/burgers_db`)
 
 module.exports = connection
