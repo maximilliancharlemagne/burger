@@ -1,9 +1,11 @@
-import { createConnection } from "mysql";
+const { createConnection } = require("mysql") 
 
-export const connection = createConnection({
+const connection = createConnection({
   port: 3306,
   username: 'root',
-  password: process.env.DB_PASS
-  database: 'burgers_db'
+  password: process.env.DB_PASS,
+  database: 'burgers_db',
   host: 'localhost'
 })
+
+module.exports = connection

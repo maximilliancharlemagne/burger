@@ -21,4 +21,4 @@ router.put('/api/burger', (req, res) => {
   res.sendStatus(200)
 })
 
-export router
+module.exports = router
